@@ -17,6 +17,9 @@
 		2041AA5C1F24DA3F009A55BB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041AA5B1F24DA3F009A55BB /* GradientView.swift */; };
 		2041AA5F1F24E709009A55BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041AA5E1F24E709009A55BB /* Constants.swift */; };
 		2041AA611F24EBE8009A55BB /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041AA601F24EBE8009A55BB /* LoginVC.swift */; };
+		2041AA631F24EE38009A55BB /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041AA621F24EE38009A55BB /* SignUpVC.swift */; };
+		2041AA661F25558A009A55BB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041AA651F25558A009A55BB /* AuthService.swift */; };
+		2041AA6A1F26AE1D009A55BB /* roundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041AA691F26AE1D009A55BB /* roundedButton.swift */; };
 		2B90E3A853A41AE20EB32593 /* Pods_SmackTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CE68AEB80CDAFEB2B97B36 /* Pods_SmackTalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,9 @@
 		2041AA5B1F24DA3F009A55BB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		2041AA5E1F24E709009A55BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2041AA601F24EBE8009A55BB /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		2041AA621F24EE38009A55BB /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		2041AA651F25558A009A55BB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		2041AA691F26AE1D009A55BB /* roundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundedButton.swift; sourceTree = "<group>"; };
 		2602B3EB8135C3C1515B3443 /* Pods-SmackTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmackTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmackTalk/Pods-SmackTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		B156F76DA8BF32C25FD6D704 /* Pods-SmackTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmackTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmackTalk/Pods-SmackTalk.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +79,7 @@
 		2041AA3C1F23F524009A55BB /* SmackTalk */ = {
 			isa = PBXGroup;
 			children = (
+				2041AA641F255575009A55BB /* Services */,
 				2041AA5D1F24E6F8009A55BB /* Utilities */,
 				2041AA561F24D62B009A55BB /* Controller */,
 				2041AA551F24D627009A55BB /* View */,
@@ -108,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				2041AA5B1F24DA3F009A55BB /* GradientView.swift */,
+				2041AA691F26AE1D009A55BB /* roundedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,6 +126,7 @@
 				2041AA571F24D65C009A55BB /* ChatVC.swift */,
 				2041AA591F24D672009A55BB /* ChannelVC.swift */,
 				2041AA601F24EBE8009A55BB /* LoginVC.swift */,
+				2041AA621F24EE38009A55BB /* SignUpVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -128,6 +137,14 @@
 				2041AA5E1F24E709009A55BB /* Constants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		2041AA641F255575009A55BB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2041AA651F25558A009A55BB /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		2F21D48CCE52C546F2BB853B /* Pods */ = {
@@ -270,8 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2041AA631F24EE38009A55BB /* SignUpVC.swift in Sources */,
+				2041AA6A1F26AE1D009A55BB /* roundedButton.swift in Sources */,
 				2041AA5A1F24D673009A55BB /* ChannelVC.swift in Sources */,
 				2041AA581F24D65C009A55BB /* ChatVC.swift in Sources */,
+				2041AA661F25558A009A55BB /* AuthService.swift in Sources */,
 				2041AA611F24EBE8009A55BB /* LoginVC.swift in Sources */,
 				2041AA5C1F24DA3F009A55BB /* GradientView.swift in Sources */,
 				2041AA3E1F23F524009A55BB /* AppDelegate.swift in Sources */,
