@@ -13,6 +13,7 @@ import Foundation
 let TO_LOGIN = "ToLoginVC"
 let TO_SIGN = "ToSignUp"
 let UNWIND = "UnwindToChannel"
+let TO_AVATAR = "toAvatarPicker"
 
 //User Defaults
 
@@ -28,3 +29,15 @@ typealias CompletionHandler = (_ Success: Bool) -> ()
 
 let BASE_URL = "https://smacktalkevanlaird.herokuapp.com/v1/"
 let URL_REGISTER = "\(BASE_URL)account/register"
+let URL_LOGIN = "\(BASE_URL)account/login"
+let URL_USER_ADD = "\(BASE_URL)user/add"
+
+//Headeraccount
+
+let HEADER = [
+    "Content-Type": "application/json; charset=utf-8"
+]
+
+//Notifications
+
+let NOTIF_USER_DATA_CHANGE = Notification.Name("userDataChanged")
