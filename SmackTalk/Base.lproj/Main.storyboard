@@ -191,6 +191,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginBtnPressed:" destination="Xxl-Xf-3Ht" eventType="touchUpInside" id="HU8-Dq-xRW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SmackTalk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igf-v3-UAr">
                                 <rect key="frame" x="135" y="90" width="104" height="24"/>
@@ -240,9 +243,14 @@
                                     <action selector="signUpBtnPressed:" destination="Xxl-Xf-3Ht" eventType="touchUpInside" id="sIc-hP-wHL"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="f2u-MN-BVf">
+                                <rect key="frame" x="168.5" y="235" width="37" height="37"/>
+                                <color key="color" red="0.42964900890000002" green="1" blue="0.38786654850000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="f2u-MN-BVf" firstAttribute="centerX" secondItem="QIl-uu-lXe" secondAttribute="centerX" id="5qj-B0-ByS"/>
                             <constraint firstItem="pPZ-yT-62R" firstAttribute="centerX" secondItem="QIl-uu-lXe" secondAttribute="centerX" id="Cga-fO-IdQ"/>
                             <constraint firstItem="qYe-z0-XzQ" firstAttribute="leading" secondItem="EgD-Cw-0ZS" secondAttribute="leading" constant="40" id="E3L-wE-7FD"/>
                             <constraint firstItem="6vY-hN-60Z" firstAttribute="top" secondItem="GqD-xx-gNe" secondAttribute="bottom" constant="32" id="JB4-tB-4Uo"/>
@@ -250,6 +258,7 @@
                             <constraint firstItem="6vY-hN-60Z" firstAttribute="centerX" secondItem="QIl-uu-lXe" secondAttribute="centerX" id="N3I-KV-ExY"/>
                             <constraint firstItem="GqD-xx-gNe" firstAttribute="width" secondItem="pPZ-yT-62R" secondAttribute="width" id="NIg-Ea-tdj"/>
                             <constraint firstItem="EgD-Cw-0ZS" firstAttribute="trailing" secondItem="KVD-DG-6KV" secondAttribute="trailing" constant="16" id="NPJ-sS-G6H"/>
+                            <constraint firstItem="f2u-MN-BVf" firstAttribute="centerY" secondItem="QIl-uu-lXe" secondAttribute="centerY" constant="-80" id="ReZ-vO-Gps"/>
                             <constraint firstItem="XXm-QS-A9e" firstAttribute="centerX" secondItem="QIl-uu-lXe" secondAttribute="centerX" id="UeG-XR-yIm"/>
                             <constraint firstItem="BTW-eV-Gcm" firstAttribute="centerX" secondItem="QIl-uu-lXe" secondAttribute="centerX" id="VEf-8m-hsd"/>
                             <constraint firstItem="pPZ-yT-62R" firstAttribute="leading" secondItem="EgD-Cw-0ZS" secondAttribute="leading" constant="40" id="a00-F5-CSj"/>
@@ -269,6 +278,9 @@
                         <viewLayoutGuide key="safeArea" id="EgD-Cw-0ZS"/>
                     </view>
                     <connections>
+                        <outlet property="passwordText" destination="6vY-hN-60Z" id="wp5-5g-KJu"/>
+                        <outlet property="spinner" destination="f2u-MN-BVf" id="dl2-Qh-UT3"/>
+                        <outlet property="usernameText" destination="pPZ-yT-62R" id="ySq-FC-dYF"/>
                         <segue destination="IZC-kJ-qFC" kind="show" identifier="ToSignUp" id="qv1-lE-ddA"/>
                     </connections>
                 </viewController>
