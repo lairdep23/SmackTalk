@@ -14,10 +14,8 @@
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
             <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-BoldItalic</string>
             <string>HelveticaNeue-Medium</string>
-        </array>
-        <array key="HelveticaNeueLights.ttc">
-            <string>HelveticaNeue-Light</string>
         </array>
     </customFonts>
     <scenes>
@@ -73,6 +71,9 @@
                                     <constraint firstAttribute="width" constant="24" id="wv2-AA-LgW"/>
                                 </constraints>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addChannelBtnPressed:" destination="c14-X4-nj7" eventType="touchUpInside" id="d5m-Xq-6w1"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ij0-Q6-FO3" customClass="CircleImage" customModule="SmackTalk" customModuleProvider="target">
                                 <rect key="frame" x="16" y="575" width="80" height="80"/>
@@ -86,7 +87,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="RNe-mW-nf5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChannelCell" id="RNe-mW-nf5" customClass="ChannelCell" customModule="SmackTalk" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RNe-mW-nf5" id="QA6-gh-WfN">
@@ -94,11 +95,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#general" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnz-yO-3MM">
-                                                    <rect key="frame" x="32" y="13" width="56" height="18"/>
+                                                    <rect key="frame" x="32" y="13" width="62.5" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="aCm-ER-slm"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -109,6 +110,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="channelName" destination="gnz-yO-3MM" id="AgS-ut-LXj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -153,6 +157,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="LJo-W4-6iR" id="qi2-Ug-2pB"/>
+                        <outlet property="tableView" destination="xjm-tR-l5h" id="uMh-wU-EM1"/>
                         <outlet property="userImage" destination="ij0-Q6-FO3" id="SMt-FO-SOH"/>
                         <segue destination="Xxl-Xf-3Ht" kind="show" identifier="ToLoginVC" id="2An-Eg-Lbm"/>
                     </connections>
@@ -204,7 +209,7 @@
                                 <color key="textColor" red="0.0" green="0.81702093909999995" blue="0.052362058519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pPZ-yT-62R">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pPZ-yT-62R">
                                 <rect key="frame" x="40" y="154" width="295" height="20"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -607,6 +612,7 @@
                         <viewLayoutGuide key="safeArea" id="9rq-Tq-sD9"/>
                     </view>
                     <connections>
+                        <outlet property="channelTitle" destination="lIh-Le-FWO" id="Ikj-Wg-xYZ"/>
                         <outlet property="menuButton" destination="IpB-Ba-aqy" id="Jeg-5Z-Q7l"/>
                     </connections>
                 </viewController>

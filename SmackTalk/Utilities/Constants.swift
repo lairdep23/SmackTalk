@@ -32,6 +32,7 @@ let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_USER_ADD = "\(BASE_URL)user/add"
 let URL_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
+let URL_GET_CHANNEL = "\(BASE_URL)channel/"
 
 //Headeraccount
 
@@ -47,3 +48,14 @@ let B_HEADER = [
 //Notifications
 
 let NOTIF_USER_DATA_CHANGE = Notification.Name("userDataChanged")
+let NOTIF_USER_CHANNELS_LOADED = Notification.Name("channelsLoaded")
+let NOTIF_USER_CHANNELS_SELECTED = Notification.Name("channelsSelected")
+
+
+
+
+
+
+
+
+
