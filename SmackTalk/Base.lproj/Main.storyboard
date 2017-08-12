@@ -694,7 +694,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="messageBody" destination="vzh-Yd-6xG" id="UXX-yo-gve"/>
-                                            <outlet property="messageTime" destination="KgU-6B-oHq" id="mbg-mz-f2a"/>
+                                            <outlet property="messageTime" destination="KgU-6B-oHq" id="b55-OT-Ce2"/>
                                             <outlet property="userImage" destination="wap-0j-byk" id="9sy-As-u9V"/>
                                             <outlet property="userName" destination="qNh-W3-c0g" id="5rM-XE-31t"/>
                                         </connections>
