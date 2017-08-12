@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20392FF51F3E61E00069A7F5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20392FF41F3E61E00069A7F5 /* Message.swift */; };
 		2041AA3E1F23F524009A55BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041AA3D1F23F524009A55BB /* AppDelegate.swift */; };
 		2041AA431F23F524009A55BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2041AA411F23F524009A55BB /* Main.storyboard */; };
 		2041AA451F23F524009A55BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2041AA441F23F524009A55BB /* Assets.xcassets */; };
@@ -32,11 +33,14 @@
 		20AB9D891F2CB04F004681B4 /* AvatarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB9D881F2CB04F004681B4 /* AvatarVC.swift */; };
 		20AB9D8B1F2CB1A3004681B4 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB9D8A1F2CB1A3004681B4 /* AvatarCell.swift */; };
 		20AB9D8D1F2CBA0D004681B4 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB9D8C1F2CBA0D004681B4 /* CircleImage.swift */; };
+		20B84FAB1F3E6F800072DE04 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B84FAA1F3E6F800072DE04 /* KeyboardBoundView.swift */; };
+		20B84FAD1F3E71A10072DE04 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B84FAC1F3E71A10072DE04 /* MessageCell.swift */; };
 		2B90E3A853A41AE20EB32593 /* Pods_SmackTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CE68AEB80CDAFEB2B97B36 /* Pods_SmackTalk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		16CE68AEB80CDAFEB2B97B36 /* Pods_SmackTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmackTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20392FF41F3E61E00069A7F5 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		2041AA3A1F23F524009A55BB /* SmackTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmackTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2041AA3D1F23F524009A55BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2041AA421F23F524009A55BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 		20AB9D881F2CB04F004681B4 /* AvatarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarVC.swift; sourceTree = "<group>"; };
 		20AB9D8A1F2CB1A3004681B4 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		20AB9D8C1F2CBA0D004681B4 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		20B84FAA1F3E6F800072DE04 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
+		20B84FAC1F3E71A10072DE04 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		2602B3EB8135C3C1515B3443 /* Pods-SmackTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmackTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmackTalk/Pods-SmackTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		B156F76DA8BF32C25FD6D704 /* Pods-SmackTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmackTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmackTalk/Pods-SmackTalk.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				20660E491F391F6700AADF64 /* Channel.swift */,
+				20392FF41F3E61E00069A7F5 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,7 +151,9 @@
 				2041AA691F26AE1D009A55BB /* roundedButton.swift */,
 				20AB9D8A1F2CB1A3004681B4 /* AvatarCell.swift */,
 				20AB9D8C1F2CBA0D004681B4 /* CircleImage.swift */,
+				20B84FAA1F3E6F800072DE04 /* KeyboardBoundView.swift */,
 				20660E4B1F3923FC00AADF64 /* ChannelCell.swift */,
+				20B84FAC1F3E71A10072DE04 /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -333,12 +342,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20B84FAB1F3E6F800072DE04 /* KeyboardBoundView.swift in Sources */,
 				20660E521F3A905A00AADF64 /* SocketService.swift in Sources */,
 				20761ACD1F2E3F0200AEF42A /* ProfileVC.swift in Sources */,
 				20660E4C1F3923FC00AADF64 /* ChannelCell.swift in Sources */,
 				2041AA631F24EE38009A55BB /* SignUpVC.swift in Sources */,
 				20AB9D891F2CB04F004681B4 /* AvatarVC.swift in Sources */,
+				20B84FAD1F3E71A10072DE04 /* MessageCell.swift in Sources */,
 				2041AA6A1F26AE1D009A55BB /* roundedButton.swift in Sources */,
+				20392FF51F3E61E00069A7F5 /* Message.swift in Sources */,
 				20660E4A1F391F6700AADF64 /* Channel.swift in Sources */,
 				20AB9D8D1F2CBA0D004681B4 /* CircleImage.swift in Sources */,
 				20660E481F391F3700AADF64 /* MessageService.swift in Sources */,
